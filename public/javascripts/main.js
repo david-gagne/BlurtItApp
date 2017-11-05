@@ -8,6 +8,7 @@ $( document ).ready(function() {
     // display about modal
     $( "div.message" ).toggleClass("about");
     $( "body" ).toggleClass("noScroll"); // overflow: hidden
+    $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
     // text content
     $("div.message.about").text("BlurtIt App was made out of love [and boredom] by @buildpax");
   });
@@ -23,6 +24,7 @@ $( document ).ready(function() {
   $( "div.card:nth-child(1)" ).click(function() {
     $( "div.message" ).toggleClass( "yo" );
     $( "body" ).toggleClass("noScroll"); // overflow: hidden
+    $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
     // Write in message
     $( "div.message.yo" ).text("Yo.");
   });
@@ -37,6 +39,7 @@ $( document ).ready(function() {
     $( "div.card:nth-child(2)" ).click(function() {
       $( "div.message" ).toggleClass( "wink" );
       $( "body" ).toggleClass("noScroll"); // overflow: hidden
+      $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
       // Write in message
       $( "div.message.wink" ).text(";-)");
     });
@@ -51,6 +54,7 @@ $( document ).ready(function() {
       $( "div.card:nth-child(3)" ).click(function() {
         $( "div.message" ).toggleClass( "watchThisForMe" );
         $( "body" ).toggleClass("noScroll"); // overflow: hidden
+        $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
         // Write in message
         $( "div.message.watchThisForMe" ).text("Watch this for me?");
       });
@@ -65,6 +69,7 @@ $( document ).ready(function() {
         $( "div.card:nth-child(4)" ).click(function() {
           $( "div.message" ).toggleClass( "whosThat" );
           $( "body" ).toggleClass("noScroll"); // overflow: hidden
+          $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
           // Write in message
           $( "div.message.whosThat" ).text("Who's that?");
         });
