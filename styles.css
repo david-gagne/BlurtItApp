@@ -1,12 +1,7 @@
 body {
-  width: 100vw;
-  height: 100vh;
   margin: 0 auto;
-  background-color: #69F0AE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #69F0AE
 }
 
 .box {
@@ -28,11 +23,112 @@ body {
   from {
     width: 0vw;
     height: 0vh;
-    border-radius: 100px;
   }
   to {
-    width: 98vw;
-    height: 98vh;
-    border-radius: 0px;
+    width: 100vw;
+    height: 100vh;
   }
+}
+
+/* Modal styles */
+.message { /* Message will populate in div */ }
+.hide {
+  display: none;
+}
+/* Message Modal Classes */
+.yo {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: #FF5252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 600%;
+}
+.wink {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: #D500F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 600%;
+}
+.watchThisForMe {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: #448AFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 600%;
+}
+.whosThat {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #212121;
+  background-color: #FFFF00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 600%;
+}
+
+
+/* boostrap component styles */
+.container {
+  width: 100%;
+}
+.card {
+  margin: 0;
+}
+.display-3 {
+  text-align: center;
+}
+.lead {
+  text-align: center;
+}
+.card-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+}
+.card-text {
+  font-size: 14px;
+}
+
+/* Message Color Schemes (Note: Uses "A200" Level colors on Google Palette --> https://material.io/guidelines/style/color.html#color-color-palette) */
+.red {
+  color: white;
+  background-color: #FF5252;
+}
+.purple {
+  color: white;
+  background-color: #D500F9;
+}
+.yellow {
+  color: #212121;
+  background-color: #FFFF00;
+}
+.blue {
+  color: white;
+  background-color: #448AFF;
 }
