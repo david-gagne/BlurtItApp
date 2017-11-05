@@ -4,6 +4,20 @@ $( document ).ready(function() {
   $( "div.card:nth-child(3)" ).addClass("blue");
   $( "div.card:nth-child(4)" ).addClass("yellow");
 
+  $( "body > div.jumbotron.jumbotron-fluid > i" ).click(function () {
+    // display about modal
+    $( "div.message" ).toggleClass("about");
+    // text content
+    $("div.message.about").text("BlurtIt App was made out of love [and boredom] by @buildpax");
+  });
+
+  // hide about modal
+  $( "div.message" ).click(function () {
+    $("div.message.about").toggleClass("about");
+  });
+
+
+
 // Display "Yo." modal
   $( "div.card:nth-child(1)" ).click(function() {
     $( "div.message" ).toggleClass( "yo" );
