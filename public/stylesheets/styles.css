@@ -41,7 +41,9 @@ i.fa {
 .hide {
   display: none;
 }
-
+.noScroll {
+  overflow: hidden;
+}
 /* About modal */
 .about {
   margin: 0 auto;

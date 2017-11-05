@@ -7,6 +7,7 @@ $( document ).ready(function() {
   $( "body > div.jumbotron.jumbotron-fluid > i" ).click(function () {
     // display about modal
     $( "div.message" ).toggleClass("about");
+    $( "body" ).toggleClass("noScroll"); // overflow: hidden
     // text content
     $("div.message.about").text("BlurtIt App was made out of love [and boredom] by @buildpax");
   });
@@ -21,6 +22,7 @@ $( document ).ready(function() {
 // Display "Yo." modal
   $( "div.card:nth-child(1)" ).click(function() {
     $( "div.message" ).toggleClass( "yo" );
+    $( "body" ).toggleClass("noScroll"); // overflow: hidden
     // Write in message
     $( "div.message.yo" ).text("Yo.");
   });
@@ -34,6 +36,7 @@ $( document ).ready(function() {
   // Display ";-)" modal
     $( "div.card:nth-child(2)" ).click(function() {
       $( "div.message" ).toggleClass( "wink" );
+      $( "body" ).toggleClass("noScroll"); // overflow: hidden
       // Write in message
       $( "div.message.wink" ).text(";-)");
     });
@@ -47,6 +50,7 @@ $( document ).ready(function() {
     // Display "Watch this for me?" modal
       $( "div.card:nth-child(3)" ).click(function() {
         $( "div.message" ).toggleClass( "watchThisForMe" );
+        $( "body" ).toggleClass("noScroll"); // overflow: hidden
         // Write in message
         $( "div.message.watchThisForMe" ).text("Watch this for me?");
       });
@@ -60,12 +64,14 @@ $( document ).ready(function() {
       // Display "Whos that?" modal
         $( "div.card:nth-child(4)" ).click(function() {
           $( "div.message" ).toggleClass( "whosThat" );
+          $( "body" ).toggleClass("noScroll"); // overflow: hidden
           // Write in message
           $( "div.message.whosThat" ).text("Who's that?");
         });
       // Hide "Who's that?" modal
         $( "div.message" ).click(function() {
           $( "div.message.whosThat" ).toggleClass( "whosThat" );
+          $( "body" ).toggleClass("noScroll"); // overflow: hidden
           // Remove text
           $( "div.message" ).text("");
         });
