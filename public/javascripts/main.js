@@ -9,6 +9,7 @@ $( document ).ready(function() {
     $( "div.message" ).toggleClass("about");
     $( "body" ).toggleClass("noScroll"); // overflow: hidden
     $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
+    $( "div.container" ).toggleClass("hide"); // hide container element
     // text content
     $("div.message.about").text("BlurtIt App was made out of love [and boredom] by @buildpax");
   });
@@ -16,6 +17,7 @@ $( document ).ready(function() {
   // hide about modal
   $( "div.message" ).click(function () {
     $("div.message.about").toggleClass("about");
+    $( "div.container" ).toggleClass("hide"); // show container element
   });
 
 
@@ -25,12 +27,14 @@ $( document ).ready(function() {
     $( "div.message" ).toggleClass( "yo" );
     $( "body" ).toggleClass("noScroll"); // overflow: hidden
     $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
+    $( "div.container" ).toggleClass("hide"); // hide container element
     // Write in message
     $( "div.message.yo" ).text("Yo.");
   });
 // Hide "Yo." modal
   $( "div.message" ).click(function() {
     $( "div.message.yo" ).toggleClass( "yo" );
+    $( "div.container" ).toggleClass("hide"); // show container element
     // Remove text
     $( "div.message" ).text("");
   });
@@ -40,12 +44,14 @@ $( document ).ready(function() {
       $( "div.message" ).toggleClass( "wink" );
       $( "body" ).toggleClass("noScroll"); // overflow: hidden
       $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
+      $( "div.container" ).toggleClass("hide"); // hide container element
       // Write in message
       $( "div.message.wink" ).text(";-)");
     });
   // Hide ";-)" modal
     $( "div.message" ).click(function() {
       $( "div.message.wink" ).toggleClass( "wink" );
+      $( "div.container" ).toggleClass("hide"); // show container element
       // Remove text
       $( "div.message" ).text("");
     });
@@ -55,12 +61,14 @@ $( document ).ready(function() {
         $( "div.message" ).toggleClass( "watchThisForMe" );
         $( "body" ).toggleClass("noScroll"); // overflow: hidden
         $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
+        $( "div.container" ).toggleClass("hide"); // hide container element
         // Write in message
         $( "div.message.watchThisForMe" ).text("Watch this for me?");
       });
     // Hide "Watch this for me?" modal
       $( "div.message" ).click(function() {
         $( "div.message.watchThisForMe" ).toggleClass( "watchThisForMe" );
+        $( "div.container" ).toggleClass("hide"); // show container element
         // Remove text
         $( "div.message" ).text("");
       });
@@ -70,6 +78,7 @@ $( document ).ready(function() {
           $( "div.message" ).toggleClass( "whosThat" );
           $( "body" ).toggleClass("noScroll"); // overflow: hidden
           $("html").scrollTop( 0 ); // set the window (html) element to the topmost position
+          $( "div.container" ).toggleClass("hide"); // hide container element
           // Write in message
           $( "div.message.whosThat" ).text("Who's that?");
         });
@@ -77,6 +86,7 @@ $( document ).ready(function() {
         $( "div.message" ).click(function() {
           $( "div.message.whosThat" ).toggleClass( "whosThat" );
           $( "body" ).toggleClass("noScroll"); // overflow: hidden
+          $( "div.container" ).toggleClass("hide"); // show container element
           // Remove text
           $( "div.message" ).text("");
         });
