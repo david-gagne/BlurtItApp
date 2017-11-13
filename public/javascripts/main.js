@@ -8,16 +8,27 @@ $( window ).on( "load", function() {
     $("#about").addClass("hide");
   })
 
-  $(".message-input").keydown(function () {
-    if ($(".message-input").val() === "") {
+  $(".container").click(function () {
+    $("input").addClass("message-input");
+    $(".validationMessage").addClass("hide");
+  })
+
+  $("input").click(function (event) {
+    event.stopPropagation();
+    $("input").removeClass("message-input");
+    $(".validationMessage").removeClass("hide");
+  })
+
+  $("input").keydown(function () {
+    if ($("input").val() === "") {
       $(".button").addClass("hide");
-    } else if ($(".message-input").val() !== "") {
+    } else if ($("input").val() !== "") {
       $(".button").removeClass("hide");
     }
   });
 
   $(".button").click(function () {
-    $("#message").text($(".message-input").val());
+    $("#message").text($("input").val());
     $("#message").removeClass("hide").addClass("flex");
   })
 

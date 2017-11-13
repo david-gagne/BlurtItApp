@@ -10,6 +10,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+input {
+  width: 300px;
+  height: 70px;
+  background-color: inherit;
+  border: none;
+  font-size: 26px;
+  outline: none;
+  color: #DCED31;
+  text-align: left;
+  font-family: Avenir Next;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
 .message-input {
   width: 300px;
   height: 70px;
@@ -21,16 +34,21 @@ body {
   text-align: left;
   font-family: Avenir Next;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: lighter;
 }
 .message-input::placeholder {
   color: #DCED31;
+  transition-duration: .2s;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .validationMessage {
   position: absolute;
-  top: 50%;
   left: 50%;
-  margin: 60px 0 0 -150px;
+  margin: 40px 0 0 -150px;
   text-align: left;
   width: 300px;
   color: gray;
@@ -80,7 +98,7 @@ body {
   font-family: Avenir Next;
   font-size: 20px;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-bottom: 25px;
@@ -90,7 +108,17 @@ body {
   font-family: Avenir Next;
   font-size: 14px;
   position: absolute;
-  top: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about .instructions {
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: Avenir Next;
+  font-size: 14px;
+  position: absolute;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -107,7 +135,7 @@ body {
   border-radius: 3px;
   position: absolute;
   outline: none;
-  top: 80%;
+  top: 75%;
   left: 50%;
   margin: 20px 0 0 -55px;
 
@@ -119,7 +147,7 @@ body {
   position: fixed;
   top: 0;
   font-family: "Fredoka One", cursive;
-  font-size: 350%;
+  font-size: 600%;
   background-color: #DCED31;
   color: #363537;
   letter-spacing: 1px;
