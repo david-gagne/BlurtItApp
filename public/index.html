@@ -1,73 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Loud, Full-screen Attention Grabbers - BlurtIt App</title>
-    <link rel="icon" href="images/favicon.ico">
+    <title>Display quick, full-screen messages</title>
+    <link rel="icon" href="images/logo.png">
     <!-- Standard meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/dca9652185.js"></script>
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid">
-      <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-      <div class="container">
-        <h1 class="display-3">BlurtIt App!</h1>
-        <p class="lead">Loud, full-screen attention grabbers for those moments when a text message just isn't enough.</p>
-      </div>
-    </div>
-    <!-- Message cards container -->
+    <i class="fa fa-question-circle-o" aria-hidden="true"></i>
     <div class="container">
+      <input class="message-input" name="message-input" required autofocus="autofocus" placeholder="Your message here" maxlength="20">
+    </div>
+    <p class="validationMessage">20 character maximum</p>
+    <button class="button hide" type="button" name="button">BlurtIt</button>
 
-        <!-- Begin Message cards -->
-        <div class="card m-3">
-          <div class="card-body">
-            <div class="card-title text-center">Yo.</div>
-            <div class="card-text text-center">Use this Blurt when you want to acknowledge a homie.</div>
-          </div>
-        </div>
-        <div class="card col- m-3">
-          <div class="card-body">
-            <div class="card-title text-center">;-)</div>
-            <div class="card-text text-center">Use this Blurt to Flirt. Or whatever winks are good for.</div>
-          </div>
-        </div>
-        <div class="card col- m-3">
-          <div class="card-body">
-            <div class="card-title text-center">Watch this for me?</div>
-            <div class="card-text text-center">Furtively ask a stranger to watch your precious booty.</div>
-          </div>
-        </div>
-        <div class="card col- m-3">
-          <div class="card-body">
-            <div class="card-title text-center">Who's that?</div>
-            <div class="card-text text-center">When someone you know is with someone you don't.</div>
-          </div>
-        </div>
-        <!-- End Message cards -->
+
+
+    <div id="about" class="hide">
+      <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+      <p class="title">Write quick, full-screen messages to people in silence.</p><br>
+      <p class="subtitle">Concept, design, and code by <a href="https://twitter.com/buildpax">@buildpax.</a><br>
+      Fork this project on <a href="https://github.com/david-gagne/BlurtItApp">GitHub</a>. </p>
     </div>
 
-    <!-- Modal -->
-    <div class="message"></div>
+    <div id="message" class="hide">
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </div>
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
     <!-- Custom scripts -->
     <script src="javascripts/main.js" charset="utf-8"></script>
  </body>

@@ -1,170 +1,129 @@
 body {
   margin: 0 auto;
-  overflow-x: hidden;
-  background-color: #69F0AE
+  overflow: hidden;
 }
-
-i.fa {
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #363537;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message-input {
+  width: 300px;
+  height: 70px;
+  background-color: inherit;
+  border: none;
+  font-size: 26px;
+  outline: none;
+  color: #DCED31;
+  text-align: left;
+  font-family: Avenir Next;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.message-input::placeholder {
+  color: #DCED31;
+}
+.validationMessage {
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 50%;
+  left: 50%;
+  margin: 20px 0 0 -150px;
+  text-align: left;
+  width: 300px;
+  color: gray;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
 }
-
-.box {
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  margin: 0 auto;
-  background-color: black;
-  border-radius: 100px;
-}
-
-.growBox {
-  animation-duration: 1s;
-  animation-name: growBox;
-  animation-fill-mode: both;
-}
-
-@keyframes growBox {
-  from {
-    width: 0vw;
-    height: 0vh;
-  }
-  to {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
-/* Modal styles */
-.message { /* Message will populate in div */ }
 .hide {
   display: none;
 }
-.noScroll {
-  overflow: hidden;
-}
-/* About modal */
-.about {
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  color: #212121;
-  background-color: #69F0AE;
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
+}
+.fa-question-circle-o {
   font-size: 30px;
-  text-align: center;
-  padding: 20px;
-  line-height: 90px;
+  right: 20px;
+  top: 30px;
+  position: absolute;
+  color: #DCED31;
 }
-
-/* Message Modal Classes */
-.yo {
-  text-align: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  background-color: #FF5252;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1000%; /* Increase font size for smaller messages. Decrease for larger messages. */
-}
-.wink {
-  text-align: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  background-color: #D500F9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 800%; /* Increase font size for smaller messages. Decrease for larger messages. */
-}
-.watchThisForMe {
-  text-align: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  background-color: #448AFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 500%; /* Increase font size for smaller messages. Decrease for larger messages. */
-}
-.whosThat {
-  text-align: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  color: #212121;
-  background-color: #FFFF00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 600%; /* Increase font size for smaller messages. Decrease for larger messages. */
-}
-
-
-/* boostrap component styles */
-.container {
-  width: 100%;
-  padding: 30px;
-}
-.jumbotron {
-  
-}
-.card {
-  margin: 0;
-}
-.display-3 {
-  text-align: center;
-}
-.lead {
-  text-align: center;
-}
-.card-title {
-  font-family: 'Fredoka One', cursive;
+.fa-times-circle-o {
   font-size: 30px;
+  right: 20px;
+  top: 30px;
+  position: absolute;
+  color: #DCED31;
 }
-.card-text {
+#about {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  opacity: .95;
+  background-color: #363537;
+  color: #ffffff;
+}
+#about > p {
+  width: 100%
+}
+#about .subtitle > a {
+  color: #DCED31;
+  text-decoration: none;
+}
+#about .title {
+  text-align: center;
+  font-weight: 600;
+  font-family: Avenir Next;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 25px;
+}
+#about .subtitle {
+  text-align: center;
+  font-family: Avenir Next;
   font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button {
+  width: 100px;
+  height: 30px;
+  color: #DCED31;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: Avenir Next;
+  background-color: inherit;
+  font-size: 16px;
+  border: 1px solid #DCED31;
+  border-radius: 3px;
+  position: absolute;
+  outline: none;
+  top: 58%;
+  left: 50%;
+  margin: 20px 0 0 -55px;
+
 }
 
-/* Message Color Schemes (Note: Uses "A200" Level colors on Google Palette --> https://material.io/guidelines/style/color.html#color-color-palette) */
-.red {
-  color: white;
-  background-color: #FF5252;
-}
-.purple {
-  color: white;
-  background-color: #D500F9;
-}
-.yellow {
-  color: #212121;
-  background-color: #FFFF00;
-}
-.blue {
-  color: white;
-  background-color: #448AFF;
+#message {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  font-family: "Fredoka One", cursive;
+  font-size: 350%;
+  background-color: #DCED31;
+  color: #363537;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
