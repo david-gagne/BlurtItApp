@@ -1,6 +1,6 @@
 $( window ).on( "load", function() {
   const message = $("div#message.flex")[0]; // screenfull: Get DOM element from jQuery collection
-  const body = $("body")[0];
+  const html = $("html")[0];
 
   $(".fa-question-circle-o").click(function () {
     $("#about").removeClass("hide");
@@ -33,15 +33,13 @@ $( window ).on( "load", function() {
     $("#message").text($("input").val());
     $("#message").removeClass("hide").addClass("flex");
     if (screenfull.enabled) {
-      screenfull.request(body);
-      screenfull.request(message);
+      screenfull.request(html);
     }
   })
 
   $("#message").click(function () {
     $("#message").removeClass("flex").addClass("hide");
-    screenfull.exit(body);
-    screenfull.exit(message);
+    screenfull.exit(html);
   })
 
 // screenfull
