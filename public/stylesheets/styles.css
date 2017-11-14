@@ -19,9 +19,9 @@ input {
   outline: none;
   color: #DCED31;
   text-align: left;
-  font-family: Avenir Next;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
-  font-weight: lighter;
+  font-weight: 100;
 }
 .message-input {
   width: 300px;
@@ -32,9 +32,9 @@ input {
   outline: none;
   color: #DCED31;
   text-align: left;
-  font-family: Avenir Next;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
-  font-weight: lighter;
+  font-weight: 100;
 }
 .message-input::placeholder {
   color: #DCED31;
@@ -52,8 +52,8 @@ input {
   text-align: left;
   width: 300px;
   color: gray;
-  font-family: sans-serif;
-  font-weight: lighter;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
   font-size: 14px;
 }
 .hide {
@@ -66,6 +66,26 @@ input {
   font-size: 30px;
   right: 20px;
   top: 30px;
+  position: absolute;
+  color: #DCED31;
+}
+.fullscreenRequest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  right: 20px;
+  bottom: 30px;
+  line-height: 20px;
+  position: absolute;
+  color: #DCED31;
+}
+.exitFullscreenRequest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  right: 20px;
+  bottom: 30px;
+  line-height: 20px;
   position: absolute;
   color: #DCED31;
 }
@@ -94,8 +114,8 @@ input {
 }
 #about .title {
   text-align: center;
-  font-weight: 600;
-  font-family: Avenir Next;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   position: absolute;
   top: 30%;
@@ -105,7 +125,7 @@ input {
 }
 #about .subtitle {
   text-align: center;
-  font-family: Avenir Next;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   position: absolute;
   top: 60%;
@@ -115,7 +135,7 @@ input {
 #about .instructions {
   letter-spacing: 1px;
   text-align: center;
-  font-family: Avenir Next;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   position: absolute;
   top: 45%;
@@ -126,9 +146,9 @@ input {
   width: 100px;
   height: 30px;
   color: #DCED31;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 1px;
-  font-family: Avenir Next;
+  font-family: "Montserrat", sans-serif;
   background-color: inherit;
   font-size: 16px;
   border: 1px solid #DCED31;

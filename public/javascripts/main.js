@@ -1,4 +1,25 @@
 $( window ).on( "load", function() {
+  let message = $("div#message.flex")[0];
+
+  $("body > span").click(function () {
+    if (screenfull.enabled) {
+      screenfull.request();
+      $("body > span").addClass("hide");
+      $("body > span.exitFullscreenRequest").removeClass("hide");
+    }
+  })
+
+  $("body > span.exitFullscreenRequest").click(function () {
+    if (screenfull.enabled) {
+      screenfull.exit();
+      $("body > span").removeClass("hide");
+      $("body > span.exitFullscreenRequest").addClass("hide");
+    }
+  })
+
+
+
+
 
   $(".fa-question-circle-o").click(function () {
     $("#about").removeClass("hide");
@@ -19,11 +40,13 @@ $( window ).on( "load", function() {
     $(".validationMessage").removeClass("hide");
   })
 
-  $("input").keydown(function () {
-    if ($("input").val() === "") {
-      $(".button").addClass("hide");
-    } else if ($("input").val() !== "") {
+  $("input").keyup(function () {
+    if ($("input").val().length > 0) {
       $(".button").removeClass("hide");
+      $(".validationMessage").removeClass("hide");
+    } else if ($("input").val().length === 0) {
+      $(".button").addClass("hide");
+      $(".validationMessage").addClass("hide");
     }
   });
 
@@ -35,11 +58,5 @@ $( window ).on( "load", function() {
   $("#message").click(function () {
     $("#message").removeClass("flex").addClass("hide");
   })
-
-// screenfull
-
-
-
-
 
 })
