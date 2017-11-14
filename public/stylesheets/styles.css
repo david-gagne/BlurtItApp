@@ -118,7 +118,7 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-bottom: 25px;
@@ -128,7 +128,7 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -138,8 +138,19 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   position: absolute;
-  top: 45%;
+  top: 30%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about .note {
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  font-weight: 100;
   transform: translate(-50%, -50%);
 }
 .button {
@@ -174,4 +185,14 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.aside {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  right: 20px;
+  bottom: 10px;
+  line-height: 20px;
+  position: absolute;
+  color: gray;
 }
