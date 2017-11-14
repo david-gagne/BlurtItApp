@@ -1,3 +1,4 @@
+<!-- TODO: Refactor with commentary. -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,7 +18,7 @@
   <body>
     <i class="fa fa-question-circle-o" aria-hidden="true"></i>
     <span class="fullscreenRequest">Fullscreen</span>
-    <span class="aside">(Chrome for Android only)</span>
+    <span class="aside">(Desktop & Chrome for Android only)</span>
     <span class="exitFullscreenRequest hide">Exit Fullscreen</span>
     <div class="container">
       <span class="section">
@@ -27,19 +28,20 @@
     </div>
     <button class="button hide" type="button" name="button">BlurtIt</button>
 
-
-
     <div id="about" class="hide">
       <i class="fa fa-times-circle-o" aria-hidden="true"></i>
       <p class="title">Write quick, full-screen messages to people in silence.</p>
-      <p class="instructions">1. Write message <br>2. Tap "BlurtIt" button <br>3. Show message <br> 4. Tap screen to close </p>
+      <p class="instructions">1. Write message <br>2. Tap "BlurtIt" button <br>3. Show message <br> 4. Tap screen to close <br><br><span class="tip">Pro Tip: For longer messages, use landscape.</span></p>
       <p class="subtitle">Concept, design, and code by <a href="https://twitter.com/buildpax">@buildpax.</a><br>
       Fork this project on <a href="https://github.com/david-gagne/BlurtItApp">GitHub</a>. <br> Fullscreen API wrapper by <a href="https://github.com/sindresorhus/screenfull.js">Sindre Sorhus</a>.</p>
       <p class="note">Fullscreen functionality optimized for Android devices running Chrome. Sorry my fellow iPhone lovers (built/tested using iPhone 5s)</p>
     </div>
 
     <div id="message" class="hide">
+      <span class="schemeOne"></span>
+      <span class="schemeTwo"></span>
 
+      <span id="messageText"></span>
     </div>
 
     <!-- jQuery -->

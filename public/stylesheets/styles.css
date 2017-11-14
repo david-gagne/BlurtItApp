@@ -1,3 +1,4 @@
+/* TODO: Refactor with commentary. */
 body {
   margin: 0 auto;
   overflow: hidden;
@@ -166,10 +167,9 @@ input {
   border-radius: 3px;
   position: absolute;
   outline: none;
-  top: 75%;
+  top: 65%;
   left: 50%;
   margin: 20px 0 0 -55px;
-
 }
 
 #message {
@@ -177,10 +177,16 @@ input {
   height: 100vh;
   position: fixed;
   top: 0;
-  font-family: "Fredoka One", cursive;
-  font-size: 600%;
+  word-wrap: break-word;
   background-color: #DCED31;
+  justify-content: center;
+  align-items: center;
+}
+#messageText {
+  font-family: "Fredoka One", cursive;
+  font-size: 500%;
   color: #363537;
+  width: 95%;
   letter-spacing: 1px;
   justify-content: center;
   align-items: center;
@@ -195,4 +201,37 @@ input {
   line-height: 20px;
   position: absolute;
   color: gray;
+}
+.tip {
+  font-size: 11px;
+}
+.schemeDefault {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #DCED31; /* background */
+  background-color: #363537; /* font color */
+  left: 20px;
+  top: 30px;
+  position: absolute;
+}
+.schemeOne {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #363537; /* background */
+  background-color: #1be7ff; /* font color */
+  left: 20px;
+  top: 30px;
+  position: absolute;
+}
+.schemeTwo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #6eeb83; /* background */
+  background-color: #ff5714; /* font color */
+  left: 70px;
+  top: 30px;
+  position: absolute;
 }

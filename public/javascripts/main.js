@@ -1,3 +1,6 @@
+// TODO: Refactor and organize code into more appropriate functional units. Add commentary.
+// TODO: Feature next: color scheme "circles" on message page that change the font and background colors.
+
 $( window ).on( "load", function() {
   let message = $("div#message.flex")[0];
 
@@ -51,7 +54,7 @@ $( window ).on( "load", function() {
   });
 
   $(".button").click(function () {
-    $("#message").text($("input").val());
+    $("#messageText").text($("input").val());
     $("#message").removeClass("hide").addClass("flex");
   })
 
