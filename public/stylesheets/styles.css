@@ -1,4 +1,4 @@
-/* TODO: Refactor with commentary. */
+/* TODO: Refactor with commentary. Add breakpoints! */
 body {
   margin: 0 auto;
   overflow: hidden;
@@ -48,8 +48,8 @@ input {
 }
 .validationMessage {
   position: absolute;
-  left: 50%;
-  margin: 40px 0 0 -150px;
+  left: 31%;
+  top: 52%;
   text-align: left;
   width: 300px;
   color: gray;
@@ -206,11 +206,11 @@ input {
   font-size: 11px;
   font-family: "Nunito", sans-serif;
   position: absolute;
-  left: 50%;
-  letter-spacing: 1px;
-  margin: 40px 0 0 -150px;
-  top: 75%;
-  color: white;
+  left: 40%;
+  letter-spacing: 2px;
+  top: 80%;
+  text-align: center;
+  color: gray;
 }
 .schemeDefault {
   width: 30px;
