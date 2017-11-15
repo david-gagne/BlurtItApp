@@ -204,6 +204,13 @@ input {
 }
 .tip {
   font-size: 11px;
+  font-family: "Nunito", sans-serif;
+  position: absolute;
+  left: 50%;
+  letter-spacing: 1px;
+  margin: 40px 0 0 -150px;
+  top: 75%;
+  color: white;
 }
 .schemeDefault {
   width: 30px;
@@ -219,7 +226,7 @@ input {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 3px solid #363537; /* background */
+  border: 3px solid #e4ff1a; /* background */
   background-color: #1be7ff; /* font color */
   left: 20px;
   top: 30px;

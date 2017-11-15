@@ -1,8 +1,13 @@
 // TODO: Refactor and organize code into more appropriate functional units. Add commentary.
 // TODO: Feature next: color scheme "circles" on message page that change the font and background colors.
-
 $( window ).on( "load", function() {
   let message = $("div#message.flex")[0];
+  let tipText = [
+    "Pro Tip: Safari iOS users, view message in landscape for fullscreen.",
+    "Pro Tip: Tap the question mark icon for more information.",
+    "Pro Tip: For longer messages, use landscape.",
+    "Pro Tip: BlurtItApp to \"Pass\" notes.",
+  ]
 
   $("body > span").click(function () {
     if (screenfull.enabled) {
@@ -19,10 +24,6 @@ $( window ).on( "load", function() {
       $("body > span.exitFullscreenRequest").addClass("hide");
     }
   })
-
-
-
-
 
   $(".fa-question-circle-o").click(function () {
     $("#about").removeClass("hide");
@@ -61,5 +62,9 @@ $( window ).on( "load", function() {
   $("#message").click(function () {
     $("#message").removeClass("flex").addClass("hide");
   })
+
+  
+
+
 
 })

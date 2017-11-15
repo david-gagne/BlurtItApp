@@ -8,6 +8,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Apple meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/dca9652185.js"></script>
     <!-- Google Fonts -->
@@ -27,19 +29,20 @@
       <p class="validationMessage hide">20 character maximum</p>
     </div>
     <button class="button hide" type="button" name="button">BlurtIt</button>
+    <span class="tip">Pro Tip: For longer messages, use landscape.</span>
 
     <div id="about" class="hide">
       <i class="fa fa-times-circle-o" aria-hidden="true"></i>
       <p class="title">Write quick, full-screen messages to people in silence.</p>
-      <p class="instructions">1. Write message <br>2. Tap "BlurtIt" button <br>3. Show message <br> 4. Tap screen to close <br><br><span class="tip">Pro Tip: For longer messages, use landscape.</span></p>
+      <p class="instructions">1. Write message <br>2. Tap "BlurtIt" button <br>3. Show message <br> 4. Tap screen to close</p>
       <p class="subtitle">Concept, design, and code by <a href="https://twitter.com/buildpax">@buildpax.</a><br>
       Fork this project on <a href="https://github.com/david-gagne/BlurtItApp">GitHub</a>. <br> Fullscreen API wrapper by <a href="https://github.com/sindresorhus/screenfull.js">Sindre Sorhus</a>.</p>
       <p class="note">Fullscreen functionality optimized for Android devices running Chrome. Sorry my fellow iPhone lovers (built/tested using iPhone 5s)</p>
     </div>
 
     <div id="message" class="hide">
-      <span class="schemeOne"></span>
-      <span class="schemeTwo"></span>
+      <!-- <span class="schemeOne"></span>
+      <span class="schemeTwo"></span> -->
 
       <span id="messageText"></span>
     </div>
