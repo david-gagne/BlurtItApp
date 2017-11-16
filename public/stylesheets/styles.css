@@ -48,8 +48,8 @@ input {
 }
 .validationMessage {
   position: absolute;
-  left: 31%;
-  top: 52%;
+  margin: 0 auto;
+  bottom: 43%;
   text-align: left;
   width: 300px;
   color: gray;
@@ -119,19 +119,10 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-bottom: 25px;
-}
-#about .subtitle {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 #about .instructions {
   letter-spacing: 1px;
@@ -139,21 +130,36 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   position: absolute;
-  top: 30%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about .subtitle {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 #about .note {
-  letter-spacing: 1px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   position: absolute;
-  top: 80%;
-  left: 50%;
   font-weight: 100;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: 0 auto;
+  bottom: 20px;
 }
+#about .noteLink {
+  text-decoration: none;
+  color: #DCED31;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .button {
   width: 100px;
   height: 30px;
@@ -167,9 +173,7 @@ input {
   border-radius: 3px;
   position: absolute;
   outline: none;
-  top: 65%;
-  left: 50%;
-  margin: 20px 0 0 -55px;
+  margin: 75px auto;
 }
 
 #message {
@@ -206,9 +210,10 @@ input {
   font-size: 11px;
   font-family: "Nunito", sans-serif;
   position: absolute;
-  left: 40%;
+  width: 100%;
+  margin: 0 auto;
   letter-spacing: 2px;
-  top: 80%;
+  bottom: 15%;
   text-align: center;
   color: gray;
 }
@@ -242,3 +247,5 @@ input {
   top: 30px;
   position: absolute;
 }
+
+/* Media Queries */

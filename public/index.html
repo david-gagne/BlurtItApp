@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Display quick, full-screen messages</title>
+    <title>Write fullscreen messages on your phone</title>
     <link rel="icon" href="images/logo.png">
     <!-- Standard meta tags -->
     <meta charset="utf-8">
@@ -11,6 +11,8 @@
     <!-- Apple meta tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image" href="images/launch.png">
+    <link rel="apple-touch-startup-image" href="images/launch-750x1334.png">
+    <link rel="apple-touch-startup-image" href="images/launch-1242x2208.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/ipad-non-retina-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/ipad-retina-114.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/touch-icon-retina-114.png">
@@ -28,21 +30,24 @@
     <span class="aside">(Desktop & Chrome for Android only)</span>
     <span class="exitFullscreenRequest hide">Exit Fullscreen</span>
     <div class="container">
+
       <span class="section">
         <input class="" name="message-input" required autofocus="autofocus" placeholder="Your message here" maxlength="20">
+        <p class="validationMessage hide">20 character maximum</p>
+        <button class="button hide" type="button" name="button">BlurtIt</button>
+        <span class="tip">Tip: For longer messages, use landscape.</span>
       </span>
-      <p class="validationMessage hide">20 character maximum</p>
+
     </div>
-    <button class="button hide" type="button" name="button">BlurtIt</button>
-    <span class="tip">Pro Tip: For longer messages, use landscape.</span>
+
 
     <div id="about" class="hide">
       <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-      <p class="title">Write quick, full-screen messages to people in silence.</p>
+      <p class="title">Write fullscreen messages on your phone.</p>
       <p class="instructions">1. Write message <br>2. Tap "BlurtIt" button <br>3. Show message <br> 4. Tap screen to close</p>
       <p class="subtitle">Concept, design, and code by <a href="https://twitter.com/buildpax">@buildpax.</a><br>
       Fork this project on <a href="https://github.com/david-gagne/BlurtItApp">GitHub</a>. <br> Fullscreen API wrapper by <a href="https://github.com/sindresorhus/screenfull.js">Sindre Sorhus</a>.</p>
-      <p class="note">Fullscreen functionality optimized for Android devices running Chrome. Sorry my fellow iPhone lovers (built/tested using iPhone 5s)</p>
+      <p class="note">Got an iPhone? <br><br> <a class="noteLink" href="#">Add BlurtItApp to your home screen.</a></p>
     </div>
 
     <div id="message" class="hide">
