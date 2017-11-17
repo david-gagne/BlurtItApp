@@ -42,15 +42,14 @@ input {
   transition-duration: .2s;
 }
 .section {
+  position: relative;
   display: flex;
   justify-content: left;
   align-items: center;
 }
 .validationMessage {
-  position: absolute;
-  margin-top: 30px;
-  text-align: left;
-  left: 12px;
+  position: fixed;
+  margin-top: 33px;
   color: gray;
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
@@ -170,9 +169,9 @@ input {
   font-size: 16px;
   border: 1px solid #DCED31;
   border-radius: 3px;
-  position: absolute;
+  position: fixed;
   outline: none;
-  bottom: 100px;
+  margin-top: 80px;
 }
 
 #message {
