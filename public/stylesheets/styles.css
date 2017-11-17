@@ -48,10 +48,9 @@ input {
 }
 .validationMessage {
   position: absolute;
-  margin: 0 auto;
-  bottom: 43%;
+  bottom: 41%;
   text-align: left;
-  width: 300px;
+  left: 12px;
   color: gray;
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
@@ -173,7 +172,7 @@ input {
   border-radius: 3px;
   position: absolute;
   outline: none;
-  margin: 75px auto;
+  bottom: 195px;
 }
 
 #message {
