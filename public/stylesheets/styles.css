@@ -23,6 +23,7 @@ input {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   font-weight: 100;
+  margin-top: -165px;
 }
 .message-input {
   width: 300px;
@@ -48,12 +49,13 @@ input {
   align-items: center;
 }
 .validationMessage {
-  position: fixed;
+  position: absolute;
   margin-top: 33px;
   color: gray;
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
   font-size: 14px;
+  margin-top: -50px;
 }
 .hide {
   display: none;
@@ -169,9 +171,9 @@ input {
   font-size: 16px;
   border: 1px solid #DCED31;
   border-radius: 3px;
-  position: fixed;
+  position: absolute;
   outline: none;
-  margin-top: 80px;
+  margin-top: 15px;
 }
 
 #message {
