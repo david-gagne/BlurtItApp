@@ -2,12 +2,22 @@
 // TODO: Feature next: color scheme "circles" on message page that change the font and background colors.
 $( window ).on( "load", function() {
   let message = $("div#message.flex")[0];
-  let tipText = [
-    "Pro Tip: Safari iOS users, view message in landscape for fullscreen.",
-    "Pro Tip: Tap the question mark icon for more information.",
-    "Pro Tip: For longer messages, use landscape.",
-    "Pro Tip: BlurtItApp to \"Pass\" notes.",
-  ]
+  let tips = [
+    "Tip: For longer messages, use landscape.",
+    "Tip: Save your voice with Blurts at bars.",
+    "Tip: For \"How to use\", tap question mark (top right)."
+    ];
+  let $tip = $("body > div.container > span.tip");
+
+  setInterval(function () {
+    if ($tip.text() === "Tip: For longer messages, use landscape.") {
+      $tip.text("Tip: Save your voice with Blurts at bars.");
+    } else if ($tip.text() === "Tip: Save your voice with Blurts at bars.") {
+      $tip.text("Tip: For \"How to use\", tap question mark.");
+    } else if ($tip.text() === "Tip: For \"How to use\", tap question mark.") {
+      $tip.text("Tip: For longer messages, use landscape.");
+    }
+  }, 6000);
 
   $("body > span").click(function () {
     if (screenfull.enabled) {
@@ -63,7 +73,7 @@ $( window ).on( "load", function() {
     $("#message").removeClass("flex").addClass("hide");
   })
 
-  
+
 
 
 
