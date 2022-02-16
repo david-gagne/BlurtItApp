@@ -6,6 +6,8 @@ button {
     background-color: #FFEB3B;
 }
 
-#preview {
-    margin: 0 auto;
+/* Styles for app.html */
+input:focus {
+    outline: none;
+    background-color: #E2E2E2;
 }

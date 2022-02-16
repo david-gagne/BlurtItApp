@@ -10,18 +10,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="vh-100">
     <nav class="h3 flex justify-between items-center ph3">
         <a class="fw7 f4 link black avenir" href="app.html">BlurtItApp</a>
         <span class="fw7 f4 link black avenir pointer">Menu</span>
     </nav>
 
-    <section class="ph3 mt4 w-100">
-        <div id="preview" class="ba h5 mw6">
-            <!-- Message preview here -->
-        </div>
+    <section class="flex justify-center items-center h-50 ph3">
+        <div>
+            <input class="mt5 h3 w-100 mw6 avenir b ba b--white f3 ttu pl1 pl3-ns pl3-m pl3-nl" type="text"
+                name="message" id="message" placeholder="Type your message here">
 
-        <input type="text" name="message" id="message">
+            <button id="blurtButton" class="pointer w-100 mw6 mt5 ba b--white br4 h3 b avenir f4">Blurt It!</button>
+        </div>
     </section>
 
 </body>
