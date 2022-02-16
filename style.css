@@ -5,3 +5,7 @@
 button {
     background-color: #FFEB3B;
 }
+
+#preview {
+    margin: 0 auto;
+}
