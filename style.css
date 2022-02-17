@@ -11,3 +11,9 @@ input:focus {
     outline: none;
     background-color: #E2E2E2;
 }
+
+#menu {
+    background-color: #FFEB3B;
+    top: 0;
+}
+
