@@ -1,3 +1,5 @@
+![Blurt It App](logo.svg)
+
 # BlurtItApp
 BlurtItApp is a simple tool for sharing urgent messages in tricky situations, where:
 - Yelling would be ineffective (e.g. in traffic or in a loud bar/nightclub).
