@@ -2,7 +2,7 @@
     color: #FFEB3B;
 }
 
-button {
+a, button {
     background-color: #FFEB3B;
 }
 
@@ -17,3 +17,6 @@ input:focus {
     top: 0;
 }
 
+.social {
+    color: #FFEB3B;
+}
