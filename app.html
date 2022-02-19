@@ -12,21 +12,38 @@
     <script type="module" src="app.js"></script>
 </head>
 
-<body class="min-vh-100">
+<body class="min-vh-100 vh-100">
     <nav class="h3 flex justify-between items-center ph3">
         <img class="mw4" src="logo.svg" alt="Blurt It App">
         <span class="fw7 f4 link black avenir pointer ttu">Menu</span>
     </nav>
 
-    <section class="flex justify-center items-center h-50 ph3">
-        <div>
-            <input class="mt5 h3 w-100 mw6 avenir b ba b--white f3 ttu pl1 pl3-ns pl3-m pl3-nl" type="text"
-                name="message" id="message" placeholder="Type your message here">
+    <section class="flex justify-center items-center h-75 ph3">
+        <div class="w-100 w-70-ns w-70-m w-50-l">
+            <input class="mt5 h3 w-100 avenir b ba b--white f3 ttu tc" type="text" name="message" id="message"
+                placeholder="Type your message here" minlength="1">
 
-            <button id="blurtButton" class="pointer w-100 mw6 mt5 ba b--white h3 b avenir f4 ttu">Blurt It!</button>
+            <div class="w-100 flex justify-center mt3">
+                <small class="avenir gray fw3">Please enter at least one character</small>
+            </div>
+
+            <div class="w-100 flex justify-center">
+                <button id="blurtButton" class="pointer w-100 mw5 mt5 ba b--white h3 b avenir f4 ttu black dn">Blurt
+                    It!</button>
+            </div>
         </div>
     </section>
 
+    <div id="appContainer" class="min-vh-100 bg-white absolute w-100 dn">
+        <div class="flex justify-center items-center w-100 min-vh-100">
+            <h1 id="blurt" class="f1 f-headline-l f-subheadline-m measure ttu black avenir lh-copy tc ph2">
+                <!-- Inject Blurt here -->
+            </h1>
+        </div>
+    </div>
+
+
+    <!-- Off canvas menu -->
     <div id="menu" class="min-vh-100 absolute w-100 dn">
         <nav class="ph3 flex justify-between items-center">
             <img class="mw4" src="logo.svg" alt="Blurt It App">
@@ -82,9 +99,14 @@
 
                             <ol class="avenir lh-copy">
                                 <li>Write your message</li>
-                                <li>Click <b>BLURT IT!</b></li>
+                                <li>Click <b>BLURT IT</b></li>
                                 <li>Share your message</li>
                             </ol>
+
+                            <p class="f5 avenir lh-copy measure-narrow">
+                                Simply click or tap the message to exit full-screen mode and return to the message input
+                                view.
+                            </p>
 
 
                             <p class="f5 avenir lh-copy measure-narrow">

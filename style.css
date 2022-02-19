@@ -12,6 +12,15 @@ input:focus {
     background-color: #E2E2E2;
 }
 
+textarea:focus {
+    outline: none;
+    background-color: #E2E2E2;
+}
+
+textarea {
+    resize: none;
+}
+
 #menu {
     background-color: #FFEB3B;
     top: 0;
@@ -19,4 +28,8 @@ input:focus {
 
 .social {
     color: #FFEB3B;
+}
+
+#appContainer {
+    top: 0;
 }
