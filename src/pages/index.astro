@@ -26,13 +26,16 @@ import Layout from "../layouts/Layout.astro";
     class="vh-100 flex justify-start items-center flex-column pt3 ph3"
   >
     <!-- Info banner -->
-    <div class="app-section w-100 flex justify-center items-center">
+    <div
+      id="info-banner"
+      class="app-section w-100 flex justify-center items-center"
+    >
       <p class="mr1 f7">Why this app was made</p>
       <img src="/arrow-up.svg" width="10" alt="Opens a new browser tab" />
     </div>
 
     <!-- Message textarea -->
-    <div class="app-section w-100 pv5">
+    <div id="message-area" class="app-section w-100 pv5">
       <textarea
         name="message"
         id="message"
