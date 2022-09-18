@@ -14,13 +14,6 @@ import Layout from "../layouts/Layout.astro";
   textarea::placeholder {
     color: var(--primary);
   }
-  /* 
-  textarea:active,
-  textarea:hover,
-  textarea:focus {
-    outline-color: var(--primary);
-    border-color: var(--primary);
-  } */
 
   textarea:focus {
     outline: none;
@@ -28,10 +21,46 @@ import Layout from "../layouts/Layout.astro";
   }
 
   #font-editor {
-    height: 11.25rem;
+    /* height: 11.25rem; */
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 4px;
   }
+
+  .bi-info-lg {
+    color: var(--primary);
+  }
+
+  i {
+    color: var(--dark);
+  }
+
+  .color-selector--primary {
+    background-color: var(--primary);
+  }
+
+  .color-selector--dark {
+    background-color: var(--dark);
+  }
+
+  #font-weight i {
+    margin-left: -5px;
+  }
+
+  button {
+    background-color: var(--primary);
+  }
+
+  /* START FULLSCREEN MESSAGE STYLES */
+  #fullscreen-container {
+    /* background-color: var(--primary); */
+  }
+
+  #blurt-message {
+    /* font-size: 10vw; */
+    /* font-size: 12vw; */
+    /* font-size: 12.5vw; */
+  }
+  /* END FULLSCREEN MESSAGE STYLES */
 
   /* START CUSTOM RANGE STYLES */
   input[type="range"] {
@@ -107,6 +136,41 @@ import Layout from "../layouts/Layout.astro";
     background: var(--brand-gray);
   }
 
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--brand-gray);
+    border-radius: 5px;
+    border: 0.2px solid var(--brand-gray);
+  }
+
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--brand-gray);
+    border-radius: 5px;
+    border: 0.2px solid var(--brand-gray);
+  }
+  input[type="range"]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type="range"]:focus::-ms-fill-lower {
+    background: var(--brand-gray);
+  }
+  input[type="range"]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type="range"]:focus::-ms-fill-upper {
+    background: var(--brand-gray);
+  }
   /* END CUSTOM RANGE STYLES */
 </style>
 
@@ -134,12 +198,15 @@ import Layout from "../layouts/Layout.astro";
     <!-- Font editor -->
     <div class="w-100 mw6 flex justify-center items-center mb4">
       <div id="font-editor" class="w-100 bg-white pa4">
+        <div class="w-100 flex justify-end">
+          <i class="bi bi-info-lg pointer pa2"></i>
+        </div>
         <!-- Size changer -->
-        <div class="w-100 flex items-center justify-center">
+        <div id="font-size" class="w-100 flex items-center justify-center">
           <div class="w-80">
             <small class="gray dib pb2">Font size</small>
             <div class="flex items-center justify-center">
-              <i class="bi bi-fonts f5"></i>
+              <i class="bi bi-fonts f5 pr2"></i>
               <!-- TODO: Figure out the actual min max number system here -->
               <input
                 type="range"
@@ -148,20 +215,61 @@ import Layout from "../layouts/Layout.astro";
                 min="1"
                 max="3"
               />
-              <i class="bi bi-fonts f3"></i>
+              <i class="bi bi-fonts f3 pl2"></i>
             </div>
           </div>
         </div>
 
         <!-- Color changer -->
-        <div></div>
+        <div id="font-color" class="w-100 flex items-center justify-center mv4">
+          <div class="w-80">
+            <small class="gray dib pb2">Font color</small>
+            <div class="flex items-center justify-center">
+              <i class="bi bi-paint-bucket f3 pr2"></i>
 
-        <!-- Bold changer -->
-        <div></div>
+              <!-- Color selectors -->
+              <ul class="w-100 list flex justify-center items-center flex-row">
+                <li
+                  class="pl0 color-selector color-selector--primary w1 h1 br-100 mh3 pa2 pointer"
+                  title="BlurtItApp Purple. Hex Color Code: #6a00f4"
+                >
+                </li>
+                <li
+                  class="pl0 color-selector color-selector--dark w1 h1 br-100 mh3 pa2 pointer"
+                  title="BlurtItApp Dark. Hex Color Code: #02063b"
+                >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weight changer -->
+        <div id="font-weight" class="w-100 flex items-center justify-center">
+          <div class="w-80">
+            <small class="gray dib pb2">Font weight</small>
+            <div class="flex items-center">
+              <i class="bi bi-type-bold f3 pr2 pointer"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Trigger button -->
-    <div></div>
+    <div class="w-100 mw6 flex justify-center items-center mt4 pb3">
+      <button class="w-100 mw5 h3 ba br4 white pointer">Blurt It Out</button>
+    </div>
   </section>
+
+  <!-- OFF CANVAS APP CONTAINER -->
+  <!-- When active: replace dn with absolute absolute--fill -->
+  <div
+    id="fullscreen-container"
+    class="w-100 vh-100 ph3 flex justify-center dn"
+  >
+    <p id="blurt-message" class="lh-copy tc mv3">
+      <!-- User's message (i.e. Blurt) will go here. -->
+    </p>
+  </div>
 </Layout>
