@@ -14,13 +14,17 @@ import Layout from "../layouts/Layout.astro";
   textarea::placeholder {
     color: var(--primary);
   }
-
-  input:focus,
+  /* 
   textarea:active,
   textarea:hover,
   textarea:focus {
-    outline-color: var(--primary) !important;
-    border-color: var(--primary) !important;
+    outline-color: var(--primary);
+    border-color: var(--primary);
+  } */
+
+  textarea:focus {
+    outline: none;
+    border: 1px solid var(--primary);
   }
 
   #font-editor {
