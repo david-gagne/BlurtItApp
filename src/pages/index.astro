@@ -1,96 +1,156 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
+  textarea {
+    height: 11.25rem;
+    resize: none;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    color: var(--primary);
+  }
 
-	h1 {
-		margin: 2rem 0;
-	}
+  textarea::placeholder {
+    color: var(--primary);
+  }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
+  textarea:active,
+  textarea:hover {
+    outline-color: var(--primary);
+  }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+  #font-editor {
+    height: 11.25rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+  /* START CUSTOM RANGE STYLES */
+  input[type="range"] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
+  input[type="range"]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  input[type="range"]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid var(--brand-gray);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  /* All the same stuff for Firefox */
+  input[type="range"]::-moz-range-thumb {
+    border: 1px solid var(--brand-gray);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  /* All the same stuff for IE */
+  input[type="range"]::-ms-thumb {
+    border: 1px solid var(--brand-gray);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--brand-gray);
+    border-radius: 5px;
+    border: 0.2px solid var(--brand-gray);
+  }
+
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: var(--brand-gray);
+  }
+
+  /* END CUSTOM RANGE STYLES */
 </style>
+
+<Layout>
+  <section class="vh-100 flex justify-start items-center flex-column pv4 ph3">
+    <!-- Info banner -->
+    <div class="flex justify-center items-center">
+      <a href="#" class="link mr1 f6">Why this app was made</a>
+      <img src="/right-arrow-up.svg" width="12" alt="Opens a new browser tab" />
+    </div>
+
+    <!-- Message area container -->
+    <div class="w-100 mw7 flex justify-center items-center mt4 mb3">
+      <textarea
+        name="message"
+        id="message"
+        class="w-100 bg-white bn pa4 lh-copy h5"
+        placeholder="Start typing your message here..."></textarea>
+    </div>
+
+    <!-- Font editor -->
+    <div class="w-100 mw7 flex justify-center items-center mb4">
+      <div id="font-editor" class="w-100 bg-white pa3">
+        <!-- Size changer -->
+        <div class="w-100 flex items-center justify-center">
+          <div class="w-80">
+            <small class="gray dib pb3">Font size</small>
+            <div class="flex items-center justify-center">
+              <i class="bi bi-fonts f5"></i>
+              <!-- TODO: Figure out the actual min max number system here -->
+              <input
+                type="range"
+                name="font-size"
+                id="font-size"
+                min="1"
+                max="10"
+              />
+              <i class="bi bi-fonts f3"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color changer -->
+        <div></div>
+
+        <!-- Bold changer -->
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Trigger button -->
+    <div></div>
+  </section>
+</Layout>
