@@ -10,6 +10,7 @@
 }
 
 body {
+  height: 1000vh;
   background-color: var(--light);
   font-family: "Inter", sans-serif;
   color: var(--primary);
