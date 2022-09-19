@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import logo from "../logo.svg";
 ---
 
 <style>
@@ -56,11 +57,17 @@ import Layout from "../layouts/Layout.astro";
   }
 
   #blurt-message {
-    /* font-size: 10vw; */
+    font-size: 10vw;
     /* font-size: 12vw; */
     /* font-size: 12.5vw; */
   }
   /* END FULLSCREEN MESSAGE STYLES */
+
+  /* START FULLSCREEN UNSUPPORTED MESSAGE STYLES */
+  #unsupported-message-container {
+    background-color: var(--light);
+  }
+  /* END FULLSCREEN UNSUPPORTED MESSAGE STYLES */
 
   /* START CUSTOM RANGE STYLES */
   input[type="range"] {
@@ -174,31 +181,6 @@ import Layout from "../layouts/Layout.astro";
   /* END CUSTOM RANGE STYLES */
 </style>
 
-<!-- START APP CODE -->
-<script>
-  // TODO: Figure out how to get textarea value for app.
-
-  // Step 1. Define the variables for the elements.
-  let messageText = document.getElementById("message");
-  let triggerButton = document.getElementById("trigger-button");
-  let fullscreenContainer = document.getElementById("fullscreen-container");
-  let blurt = document.getElementById("blurt-message");
-  let blurtMessageText = blurt.textContent;
-
-  triggerButton.onclick = function () {
-    // display fullscreen element
-    fullscreenContainer.classList.remove("dn");
-    fullscreenContainer.classList.add(
-      "flex",
-      "justify-center",
-      "absolute",
-      "absolute--fill"
-    );
-
-    // set blurt text content to message user typed in textarea
-  };
-</script>
-<!-- END APP CODE -->
 <Layout>
   <section class="flex justify-start items-center flex-column pv4 ph3">
     <!-- Info banner -->
@@ -282,18 +264,34 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <!-- Trigger button -->
-    <div class="w-100 mw6 flex justify-center items-center mt4 pb3">
+    <div
+      id="button-container"
+      class="w-100 mw6 flex justify-center items-center mt4 pb3"
+    >
       <button id="trigger-button" class="w-100 mw5 h3 ba br4 white pointer"
         >Blurt It Out</button
       >
     </div>
   </section>
 
-  <!-- OFF CANVAS APP CONTAINER -->
+  <!-- START OFF CANVAS APP CONTAINER -->
   <!-- When active: replace dn with flex justify-center absolute absolute--fill -->
   <div id="fullscreen-container" class="w-100 vh-100 ph3 dn">
-    <p id="blurt-message" class="lh-copy tc mv3">
+    <p id="blurt-message" class="lh-copy tc mv3 white">
       <!-- User's message (i.e. Blurt) will go here. -->
+    </p>
+  </div>
+  <!-- END OFF CANVAS APP CONTAINER -->
+
+  <!-- START OFF CANVAS LANDING PAGE FOR UNSUPPORTED DEVICES (I.E. Those lacking Fullscreen API...iPhones, come on Apple) -->
+  <!-- When active: replace dn with flex justify-center absolute absolute--fill -->
+  <div
+    id="unsupported-message-container"
+    class="w-100 vh-100 ph3 dn justify-center items-center flex-column absolute absolute--fill"
+  >
+    <img src={logo} alt="BlurtItApp logo" width="40" />
+    <p id="unsupported-message-text" class="lh-copy tc mv3 measure">
+      BlurtItApp only works on tablet, desktop, and Android for now.
     </p>
   </div>
 </Layout>
