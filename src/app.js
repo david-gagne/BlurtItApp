@@ -10,31 +10,27 @@ if (document.fullscreenEnabled) {
 
     // Display the fullscreen element.
     fullscreenContainer.classList.remove("dn");
-    fullscreenContainer.classList.add(
-      "flex",
-      "justify-center",
-      "absolute",
-      "absolute--fill"
-    );
+    fullscreenContainer.classList.add("flex");
 
     // Set textarea value to blurt message
     blurt.textContent = textarea.value;
+
+    fullscreenContainer.requestFullscreen();
   });
 
   fullscreenContainer.addEventListener("click", function () {
     // Remove the fullscreen element.
-    fullscreenContainer.classList.remove(
-      "flex",
-      "justify-center",
-      "absolute",
-      "absolute--fill"
-    );
+    fullscreenContainer.classList.remove("flex");
     fullscreenContainer.classList.add("dn");
+
+    document.exitFullscreen();
   });
 } else {
+  let body = document.querySelector("body");
   let unsupportedMessage = document.getElementById(
     "unsupported-message-container"
   );
 
+  body.classList.add("overflow-hidden");
   unsupportedMessage.classList.replace("dn", "flex");
 }
