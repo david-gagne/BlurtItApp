@@ -4,19 +4,18 @@ import logo from "../logo.svg";
 ---
 
 <style>
-  textarea {
-    height: 11.25rem;
-    resize: none;
+  input {
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     color: var(--primary);
   }
 
-  textarea::placeholder {
+  input::placeholder {
     color: var(--primary);
   }
 
-  textarea:focus {
+  input:focus {
     outline: none;
     border: 1px solid var(--primary);
   }
@@ -49,6 +48,17 @@ import logo from "../logo.svg";
 
   button {
     background-color: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  button:active {
+    box-shadow: none;
+  }
+
+  button[disabled] {
+    visibility: hidden;
   }
 
   /* START FULLSCREEN MESSAGE STYLES */
@@ -56,10 +66,16 @@ import logo from "../logo.svg";
     background-color: var(--primary);
   }
 
-  #blurt-message {
-    font-size: 10vw;
-    /* font-size: 12vw; */
-    /* font-size: 12.5vw; */
+  @media screen and (orientation: portrait) {
+    #blurt-message {
+      font-size: 10vh;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    #blurt-message {
+      font-size: 12vw;
+    }
   }
   /* END FULLSCREEN MESSAGE STYLES */
 
@@ -68,199 +84,29 @@ import logo from "../logo.svg";
     background-color: var(--light);
   }
   /* END FULLSCREEN UNSUPPORTED MESSAGE STYLES */
-
-  /* START CUSTOM RANGE STYLES */
-  input[type="range"] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
-
-  input[type="range"]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  }
-
-  input[type="range"]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-
-    /* Hides the slider so custom styles can be added */
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: 1px solid rgba(106, 0, 244, 0.3);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  }
-
-  /* All the same stuff for Firefox */
-  input[type="range"]::-moz-range-thumb {
-    border: 1px solid rgba(106, 0, 244, 0.3);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  }
-
-  /* All the same stuff for IE */
-  input[type="range"]::-ms-thumb {
-    border: 1px solid rgba(106, 0, 244, 0.3);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  }
-
-  input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    background: var(--brand-gray);
-    border-radius: 5px;
-    border: 0.2px solid var(--brand-gray);
-  }
-
-  input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: var(--brand-gray);
-  }
-
-  input[type="range"]::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    background: var(--brand-gray);
-    border-radius: 5px;
-    border: 0.2px solid var(--brand-gray);
-  }
-
-  input[type="range"]::-ms-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    background: var(--brand-gray);
-    border-radius: 5px;
-    border: 0.2px solid var(--brand-gray);
-  }
-  input[type="range"]::-ms-fill-lower {
-    background: #2a6495;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type="range"]:focus::-ms-fill-lower {
-    background: var(--brand-gray);
-  }
-  input[type="range"]::-ms-fill-upper {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type="range"]:focus::-ms-fill-upper {
-    background: var(--brand-gray);
-  }
-  /* END CUSTOM RANGE STYLES */
 </style>
 
 <Layout>
-  <section class="flex justify-start items-center flex-column pv4 ph3">
+  <section class="vh-100 flex justify-center items-center flex-column pv4 ph3">
     <!-- Info banner -->
     <div class="flex justify-center items-center">
-      <a href="#" class="link mr1 f6">Why this app was made</a>
+      <a href="#" class="link mr1 f6">Why I made this app</a>
       <img src="/right-arrow-up.svg" width="12" alt="Opens a new browser tab" />
     </div>
 
     <!-- Message area container -->
     <div class="w-100 mw6 flex justify-center items-center mt4 mb3">
-      <textarea
+      <input
+        type="text"
         name="message"
         id="message"
-        class="w-100 bg-white bn pa4 lh-copy h5"
-        placeholder="Start typing your message here..."></textarea>
+        class="w-100 bg-white bn pa4 lh-copy h4"
+        placeholder="Start typing your message here..."
+      />
     </div>
 
     <div>
-      <!-- TODO: Add clear feature for textarea and consider "storing" previously written messages -->
-    </div>
-
-    <!-- Font editor -->
-    <div class="w-100 mw6 flex justify-center items-center mb4">
-      <div id="font-editor" class="w-100 bg-white pa4">
-        <div class="w-100 flex justify-end">
-          <i class="bi bi-info-lg pointer pa2"></i>
-        </div>
-        <!-- Size changer -->
-        <div id="font-size" class="w-100 flex items-center justify-center">
-          <div class="w-80">
-            <small class="gray dib pb2">Font size</small>
-            <div class="flex items-center justify-center">
-              <i class="bi bi-fonts f5 pr2"></i>
-              <!-- TODO: Figure out the actual min max number system here -->
-              <input
-                type="range"
-                name="font-size"
-                id="font-size"
-                min="1"
-                max="3"
-              />
-              <i class="bi bi-fonts f3 pl2"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Color changer -->
-        <div id="font-color" class="w-100 flex items-center justify-center mv4">
-          <div class="w-80">
-            <small class="gray dib pb2">Font color</small>
-            <div class="flex items-center justify-center">
-              <i class="bi bi-paint-bucket f3 pr2"></i>
-
-              <!-- Color selectors -->
-              <ul class="w-100 list flex justify-center items-center flex-row">
-                <li
-                  class="pl0 color-selector color-selector--primary w1 h1 br-100 mh3 pa2 pointer"
-                  title="BlurtItApp Purple. Hex Color Code: #6a00f4"
-                >
-                </li>
-                <li
-                  class="pl0 color-selector color-selector--dark w1 h1 br-100 mh3 pa2 pointer"
-                  title="BlurtItApp Dark. Hex Color Code: #02063b"
-                >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Weight changer -->
-        <div id="font-weight" class="w-100 flex items-center justify-center">
-          <div class="w-80">
-            <small class="gray dib pb2">Font weight</small>
-            <div class="flex items-center">
-              <i class="bi bi-type-bold f3 pr2 pointer"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- TODO: Add clear feature for input and consider "storing" previously written messages -->
     </div>
 
     <!-- Trigger button -->
@@ -268,7 +114,7 @@ import logo from "../logo.svg";
       id="button-container"
       class="w-100 mw6 flex justify-center items-center mt4 pb3"
     >
-      <button id="trigger-button" class="w-100 mw5 h3 ba br4 white pointer"
+      <button id="trigger-button" class="w-100 h3 ba br4 white pointer" disabled
         >Blurt It Out</button
       >
     </div>
@@ -279,7 +125,7 @@ import logo from "../logo.svg";
     id="fullscreen-container"
     class="ph3 dn justify-center items-center absolute absolute--fill"
   >
-    <p id="blurt-message" class="lh-copy tc mv3 white">
+    <p id="blurt-message" class="lh-copy tc mv3 white ph2">
       <!-- User's message (i.e. Blurt) will go here. -->
     </p>
   </div>
