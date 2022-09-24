@@ -35,11 +35,10 @@ if (document.fullscreenEnabled) {
     document.exitFullscreen();
   });
 } else {
-  let body = document.querySelector("body");
-  let unsupportedMessage = document.getElementById(
-    "unsupported-message-container"
-  );
-
-  body.classList.add("overflow-hidden");
-  unsupportedMessage.classList.replace("dn", "flex");
+  // let body = document.querySelector("body");
+  // let unsupportedMessage = document.getElementById(
+  //   "unsupported-message-container"
+  // );
+  // body.classList.add("overflow-hidden");
+  // unsupportedMessage.classList.replace("dn", "flex");
 }
