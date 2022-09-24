@@ -78,12 +78,6 @@ import logo from "../logo.svg";
     }
   }
   /* END FULLSCREEN MESSAGE STYLES */
-
-  /* START FULLSCREEN UNSUPPORTED MESSAGE STYLES */
-  #unsupported-message-container {
-    background-color: var(--light);
-  }
-  /* END FULLSCREEN UNSUPPORTED MESSAGE STYLES */
 </style>
 
 <Layout>
@@ -130,16 +124,4 @@ import logo from "../logo.svg";
     </p>
   </div>
   <!-- END OFF CANVAS APP CONTAINER -->
-
-  <!-- START OFF CANVAS LANDING PAGE FOR UNSUPPORTED DEVICES (I.E. Those lacking Fullscreen API...iPhones, come on Apple) -->
-  <!-- When active: replace dn with flex justify-center absolute absolute--fill -->
-  <div
-    id="unsupported-message-container"
-    class="w-100 vh-100 ph3 dn justify-center items-center flex-column absolute absolute--fill"
-  >
-    <img src={logo} alt="BlurtItApp logo" width="40" />
-    <p id="unsupported-message-text" class="lh-copy tc mv3 measure">
-      BlurtItApp only works on tablet, desktop, and Android for now.
-    </p>
-  </div>
 </Layout>
