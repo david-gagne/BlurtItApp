@@ -36,7 +36,7 @@ if (document.fullscreenEnabled) {
   });
 } else {
   // Reveal or hide button based on whether user has typed a message
-  message.addEventListener("keyup", function (event) {
+  message.addEventListener("input", function (event) {
     if (event.target.value.length > 0) {
       button.removeAttribute("disabled");
     } else {
