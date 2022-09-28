@@ -55,6 +55,13 @@ if (document.fullscreenEnabled) {
     }
   });
 
+  // Clear the input when user clicks clear button
+  clearButton.addEventListener("click", function () {
+    input.value = "";
+    clearButton.setAttribute("disabled", "");
+    button.setAttribute("disabled", "");
+  });
+
   button.addEventListener("click", function () {
     let blurt = document.getElementById("blurt-message");
 
