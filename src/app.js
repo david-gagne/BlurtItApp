@@ -1,17 +1,27 @@
 // Step 1. Define the variables for the elements.
 let input = document.getElementById("message");
 let button = document.getElementById("trigger-button");
+let clearButton = document.getElementById("clear");
 let fullscreenContainer = document.getElementById("fullscreen-container");
 
 // Check if Fullscreen API is available
 if (document.fullscreenEnabled) {
   // Reveal or hide button based on whether user has typed a message
-  message.addEventListener("keyup", function (event) {
+  input.addEventListener("keyup", function (event) {
     if (event.target.value.length > 0) {
+      clearButton.removeAttribute("disabled");
       button.removeAttribute("disabled");
     } else {
+      clearButton.setAttribute("disabled", "");
       button.setAttribute("disabled", "");
     }
+  });
+
+  // Clear the input when user clicks clear button
+  clearButton.addEventListener("click", function () {
+    input.value = "";
+    clearButton.setAttribute("disabled", "");
+    button.setAttribute("disabled", "");
   });
 
   button.addEventListener("click", function () {
@@ -36,8 +46,9 @@ if (document.fullscreenEnabled) {
   });
 } else {
   // Reveal or hide button based on whether user has typed a message
-  message.addEventListener("input", function (event) {
+  input.addEventListener("input", function (event) {
     if (event.target.value.length > 0) {
+      clear.removeAttribute("disabled");
       button.removeAttribute("disabled");
     } else {
       button.setAttribute("disabled", "");

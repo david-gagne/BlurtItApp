@@ -62,6 +62,10 @@ import logo from "../logo.svg";
     visibility: hidden;
   }
 
+  #clear {
+    color: white;
+  }
+
   /* START FULLSCREEN MESSAGE STYLES */
   #fullscreen-container {
     background-color: var(--primary);
@@ -85,12 +89,15 @@ import logo from "../logo.svg";
   <section class="vh-100 flex justify-center items-center flex-column pv4 ph3">
     <!-- Info banner -->
     <div class="flex justify-center items-center">
-      <a href="#" class="link mr1 f6">Why I made this app</a>
+      <a
+        href="https://workflowy.com/s/the-blurtitapp-origi/4a16s3gpCjGWJxpf"
+        class="link mr1 f6">Why I made this app</a
+      >
       <img src="/right-arrow-up.svg" width="12" alt="Opens a new browser tab" />
     </div>
 
     <!-- Message area container -->
-    <div class="w-100 mw6 flex justify-center items-center mt4 mb3">
+    <div class="w-100 mw6 flex justify-center items-center mt4">
       <input
         type="text"
         name="message"
@@ -100,8 +107,12 @@ import logo from "../logo.svg";
       />
     </div>
 
-    <div>
-      <!-- TODO: Add clear feature for input and consider "storing" previously written messages -->
+    <!-- Clear message area -->
+    <div class="w-100 mw6 flex justify-end mt3">
+      <button id="clear" class="white ph3 pv2 br4" disabled>
+        <i class="bi bi-trash3-fill white"></i>
+        Clear</button
+      >
     </div>
 
     <!-- Trigger button -->
