@@ -51,7 +51,7 @@ if (document.fullscreenEnabled) {
       clear.removeAttribute("disabled");
       button.removeAttribute("disabled");
     } else {
-      clear.removeAttribute("disabled");
+      clear.setAttribute("disabled", "");
       button.setAttribute("disabled", "");
     }
   });
